@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <title>Hjem</title>
     <link rel="stylesheet" href="styles/style.css">
-    <script src="script.js"></script>
+    <script src="home.js" defer></script>
 
-
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
@@ -24,14 +24,18 @@
                         <a class="nav-link active" aria-current="page" href="home.html">Hjem</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="flightlog.html?id=">Flylogg</a>
+                    </li>
+                    <li class="nav-item">
                         <button class="nav-link" onclick="loggUt()" >Logg ut</button>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+        <span id="brukerId"></span>
+        <span id="velkommen-melding"></span>
 
-    <button onclick="loggUt()">Logg ut her</button>
-
+        <a href="brukerInfo.html?id=">Sjekk brukerinfor her</a>
     </body>
 </html>

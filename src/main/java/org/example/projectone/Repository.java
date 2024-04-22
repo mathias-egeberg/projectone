@@ -1,6 +1,7 @@
 package org.example.projectone;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 @org.springframework.stereotype.Repository
@@ -23,5 +24,13 @@ public class Repository {
             return false;
         }
     }
+
+    public Bruker hentBruker(int id){
+        String sql = "SELECT * FROM bruker WHERE id = ?";
+        Bruker enBruker = db.queryForObject(sql, BeanPropertyRowMapper.newInstance(Bruker.class),id);
+        return enBruker;
+    }
+
+
 
 }
